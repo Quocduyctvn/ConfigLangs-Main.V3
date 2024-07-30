@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstractions\**" />
+    <Compile Remove="Exceptions\**" />
+    <Compile Remove="Mapping\**" />
+    <EmbeddedResource Remove="Abstractions\**" />
+    <EmbeddedResource Remove="Exceptions\**" />
+    <EmbeddedResource Remove="Mapping\**" />
+    <None Remove="Abstractions\**" />
+    <None Remove="Exceptions\**" />
+    <None Remove="Mapping\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lscCommon.configLang.commandContract\lscCommon.configLang.commandContract.csproj" />
+    <ProjectReference Include="..\lscCommon.configLang.commandDomain\lscCommon.configLang.commandDomain.csproj" />
+  </ItemGroup>
+
+</Project>

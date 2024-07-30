@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstractions\**" />
+    <Content Remove="Abstractions\**" />
+    <EmbeddedResource Remove="Abstractions\**" />
+    <None Remove="Abstractions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lscCommon.configLang.commandApplication\lscCommon.configLang.commandApplication.csproj" />
+    <ProjectReference Include="..\lscCommon.configLang.commandPersistence\lscCommon.configLang.commandPersistence.csproj" />
+    <ProjectReference Include="..\lscCommon.configLang.commandPresentation\lscCommon.configLang.commandPresentation.csproj" />
+  </ItemGroup>
+
+</Project>
